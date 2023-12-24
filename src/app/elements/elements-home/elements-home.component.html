@@ -1,0 +1,18 @@
+<app-header>
+  {{ 'placeholder component' | uppercase }}
+</app-header>
+<app-placeholder [header]="false" [lines]="4"></app-placeholder>
+
+<app-header>
+  {{ 'segment component' | uppercase }}
+</app-header>
+<app-segment>
+  <!-- Injected to app-segment by className -->
+  <div class="header--segment">
+    <i class="pdf file outline icon"></i>
+    No documents are listed for this customer.
+  </div>
+
+  <!-- Injected to app-segment by attribute -->
+  <div btnSegment class="ui primary button">Add Document</div>
+</app-segment>
