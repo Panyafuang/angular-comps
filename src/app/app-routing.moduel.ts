@@ -18,6 +18,13 @@ const routes: Routes = [
       return m.CollectionsModule;
     }
   },
+  {
+    path: 'views',
+    loadChildren: async() => {
+      const m = await import('./views/views.module');
+      return m.ViewsModule;
+    }
+  },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent }
 ];

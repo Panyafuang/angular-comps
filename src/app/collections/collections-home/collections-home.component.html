@@ -1,1 +1,23 @@
-<p>collections-home works!</p>
+<app-header>{{ "table component" | uppercase }}</app-header>
+<app-table [data]="data" [headers]="headers" class="striped celled"></app-table>
+
+<app-header>{{ "tab menu" | uppercase }}</app-header>
+<!-- Tabs -->
+<app-tabs>
+  <!-- localhost:4200/collections -->
+  <a
+    class="item"
+    [routerLink]="['./']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Biography</a
+  >
+  <!-- localhost:4200/collections/companies -->
+  <a class="item" [routerLink]="['companies']" routerLinkActive="active"
+    >Companies</a
+  >
+  <!-- localhost:4200/collections/partners -->
+  <a class="item" [routerLink]="['./partners']" routerLinkActive="active"
+    >Partners</a
+  >
+</app-tabs>
