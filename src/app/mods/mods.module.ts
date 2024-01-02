@@ -6,12 +6,14 @@ import { ModesHomeComponent } from './modes-home/modes-home.component';
 import { ModalComponent } from './modal/modal.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material.module';
+import { AccordionComponent } from './accordion/accordion.component';
 
 
 @NgModule({
   declarations: [
     ModesHomeComponent,
-    ModalComponent
+    ModalComponent,
+    AccordionComponent
   ],
   imports: [
     CommonModule,
