@@ -25,6 +25,13 @@ const routes: Routes = [
       return m.ViewsModule;
     }
   },
+  {
+    path: 'mods',
+    loadChildren: async() => {
+      const m = await import('./mods/mods.module');
+      return m.ModsModule
+    }
+  },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent }
 ];

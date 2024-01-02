@@ -1,0 +1,11 @@
+<app-header>{{ 'modal component' | uppercase }}</app-header>
+<button mat-raised-button color="primary" (click)="onModalOpen()">Open Modal</button>
+<app-modal *ngIf="modalOpen" (close)="onModalOpen()">
+    <div modalTitle>
+        {{ 'modal title' | uppercase }}
+    </div>
+    <p>modal content</p>
+    <ng-container modalFooter>
+        <button class="ui button" (click)="onModalOpen()">OK (custom)</button>
+    </ng-container>
+</app-modal>

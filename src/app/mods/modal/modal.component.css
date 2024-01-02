@@ -1,0 +1,20 @@
+/* ─── Custom Button From Another Component (when not passing any custom) ───────────────────────────────── */
+.actions:empty {
+    display: none;
+}
+
+.actions-default {
+    display: none;
+}
+
+/** 
+* .actions:empty = button that custom by another component.
+* + .actions-default = lookin for sibling to it. name .action-default.
+*
+* อธิบายรวมๆ คือ หาก component ที่เรียกใช้ modal ไม่ได้ส่ง button มาด้วย 
+* step1 ให้ display: none ตัว <ng-content modalFooter></ng-content>
+* step2 ให้มองหา tag ที่ sibling กันที่มี class ชื่อ .action-default แล้วให้ display: block
+*/
+.actions:empty + .actions-default {
+    display: block;
+}
